@@ -5,11 +5,19 @@ services:
       context: .
       dockerfile: ./Dockerfile
       args:
-        FUGA: fuga
-        FOO: foo
+        V01a: v01
+        V02a: v02
+        V03a: v03
+        V04a: v04
+        V05a: v05
+        V06a: v06
     container_name: printenv
     environment:
-      HOGE: 'hoge'
-      PIYO: 'piyo'
+      V11a: 'v11'
+      V12a: 'v12'
+      V13a: 'v13'
+      V14a: 'v14'
+      V15a: 'v15'
+      V16a: 'v16'
     volumes:
       - ./start.sh:/app/start.sh
