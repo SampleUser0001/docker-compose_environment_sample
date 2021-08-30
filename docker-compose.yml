@@ -1,0 +1,15 @@
+version: '3'
+services:
+  envs:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        FUGA: fuga
+        FOO: foo
+    container_name: printenv
+    environment:
+      HOGE: 'hoge'
+      PIYO: 'piyo'
+    volumes:
+      - ./start.sh:/app/start.sh
