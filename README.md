@@ -1,0 +1,2 @@
+# docker-compose_environment_sample
+docker-compose.ymlで指定したenvirnmentの値がDockerfileで指定しなくてもコンテナ内で使用できることを確認する。
