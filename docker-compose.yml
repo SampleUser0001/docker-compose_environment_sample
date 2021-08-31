@@ -11,6 +11,7 @@ services:
         V04a: v04
         V05a: v05
         V06a: v06
+        V41a: v41
     container_name: printenv
     environment:
       V11a: 'v11'
@@ -19,5 +20,6 @@ services:
       V14a: 'v14'
       V15a: 'v15'
       V16a: 'v16'
+      V51a: 'v51'
     volumes:
       - ./start.sh:/app/start.sh

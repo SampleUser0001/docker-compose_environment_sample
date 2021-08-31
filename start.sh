@@ -27,3 +27,6 @@ echo 'V15b : ' ${V15b}
 
 echo 'V21 : ' ${V21}
 echo 'V31 : ' ${V31}
+
+echo 'V41a : ' ${V41a}
+echo 'V51a : ' ${V51a}

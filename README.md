@@ -12,7 +12,8 @@ docker-compose.ymlで指定したenvirnmentの値がDockerfileで指定しなく
 7. docker-compose.yml -> build.args -> ENV -> ARG はコンテナに渡らない。
 8. docker-compose.yml -> build.args -> ENV -> ENV はコンテナに渡らない。
   - Dockerfile内でENVで定義された値をDockerfile内で呼べていない？
-
+9. docker-compose.yml -> build.args はコンテナに渡らない。
+10. docker-compose.yml -> environment はコンテナに渡る。
 
 ## docker-compose.yml
 
@@ -30,6 +31,7 @@ services:
         V04a: v04
         V05a: v05
         V06a: v06
+        V41a: v41
     container_name: printenv
     environment:
       V11a: 'v11'
@@ -38,6 +40,7 @@ services:
       V14a: 'v14'
       V15a: 'v15'
       V16a: 'v16'
+      V51a: 'v51'
     volumes:
       - ./start.sh:/app/start.sh
 ```
@@ -91,17 +94,15 @@ printenv | V15a :  v15
 printenv | V16a :  v16
 printenv | V01b : 
 printenv | V02b :  v02
-printenv | V03b : 
 printenv | V04b : 
 printenv | V05b : 
-printenv | V06b : 
 printenv | V11b : 
 printenv | V12b : 
-printenv | V13b : 
 printenv | V14b : 
 printenv | V15b : 
-printenv | V16b : 
 printenv | V21 : 
 printenv | V31 :  v31
+printenv | V41a : 
+printenv | V51a : 
 ```
 
