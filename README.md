@@ -3,6 +3,16 @@ docker-compose.ymlで指定したenvirnmentの値がDockerfileで指定しなく
 
 ## 実行結果
 
+### 概要
+
+1. docker-compose.yml -> environmentで指定した値はコンテナに渡される。
+2. docker-compose.yml -> build.argsで指定した値はコンテナに渡されない。
+3. docker-compose.yml -> environmentで指定した値はDockerfileのARGで取得できない。
+4. docker-compose.yml -> build.argsで指定した値はDockerfileのARGで取得できる。
+
+
+### 詳細
+
 1. docker-compose.yml -> build.args -> ARG はコンテナに渡らない。
 2. docker-compose.yml -> build.args -> ENV はコンテナに渡らない。
 3. docker-compose.yml -> environment -> ARG はコンテナに渡る。
