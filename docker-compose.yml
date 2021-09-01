@@ -21,5 +21,6 @@ services:
       V15a: 'v15'
       V16a: 'v16'
       V51a: 'v51'
+      V61a: 'v61'
     volumes:
       - ./start.sh:/app/start.sh

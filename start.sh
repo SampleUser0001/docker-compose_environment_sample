@@ -30,3 +30,5 @@ echo 'V31 : ' ${V31}
 
 echo 'V41a : ' ${V41a}
 echo 'V51a : ' ${V51a}
+
+echo 'V61a : ' ${V61a}
